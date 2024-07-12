@@ -8,7 +8,8 @@
     "start": "npm run build && npm run server",
     "server": "nodemon server/server.js",
     "build": "cd client && npm run build",
-    "install": "cd client && npm install",
+    "build-client": "npx webpack --mode production",
+    "install": "cd client && npm install --omit=dev",
     "client": "cd client && npm run dev"
   },
   "keywords": [],
@@ -19,7 +20,7 @@
     "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+      "concurrently": "^6.3.0",
+      "nodemon": "^3.1.4"
+    }
   }
-}
